@@ -20,6 +20,12 @@
     mv   t1 a0
     li   t2 1
     li   t3 1
+if_t1_1:
+    li   t6 1
+    bne  t1 t6 if_t1_0
+    mv   t4 t0
+    mv   t0 zero
+    j    result
 if_t1_0:
     bnez t1 if_t0_0
     j    error
